@@ -1,7 +1,7 @@
 # Lab4_IntroToUnity
 
 ## Team Members:
-* Kelsey Anderson
+* Kelsey Anderson (testing git clone)
 * Jesica Maria Ramirez Toscano
 
 Goals:
