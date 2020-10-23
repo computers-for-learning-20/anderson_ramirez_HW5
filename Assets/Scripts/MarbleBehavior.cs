@@ -22,6 +22,12 @@ public class MarbleBehavior : MonoBehaviour
     void Update()
     {
         // Put code is for movement using the Sprite's native variables here
+
+        fbInput = Input.GetAxis("Vertical")*moveSpeed;
+        lrInput = Input.GetAxis("Horizontal")*rotateSpeed;
+
+        this.transform.Translate(Vector3.forward * fbInput* Time.deltaTime);
+        this.transform.Rotate(Vector3.up* lrInput* Time.deltaTime);
     }
     
     void FixedUpdate()
