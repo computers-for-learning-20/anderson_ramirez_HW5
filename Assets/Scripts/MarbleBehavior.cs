@@ -33,12 +33,11 @@ public class MarbleBehavior : MonoBehaviour
     
     void FixedUpdate()
     {
-        /* Commented Out:
-         * I wasn't sure if we were supposed to do it
-         * this way because we are using RigidBody?
-         * It seems to behave about the same in the game.
+        /* I don't think we should have both sets
+         * of controls running at the same time.
+         * They both work fine though.
+         * Commenting these out for now.
          * 
-        //Put code that moves the sprite using the RigidBody here
         Vector3 rotation = Vector3.up * lrInput;
 
         Quaternion angleRot = Quaternion.Euler(rotation *
