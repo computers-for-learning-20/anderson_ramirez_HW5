@@ -5,7 +5,7 @@ using UnityEngine;
 public class OscillateZ : MonoBehaviour
 {
     public float moveSpeed = 0.1f;
-    public float delta = 45f;
+    public float delta = 35f;
     private Vector3 startPos;
 
     // Start is called before the first frame update

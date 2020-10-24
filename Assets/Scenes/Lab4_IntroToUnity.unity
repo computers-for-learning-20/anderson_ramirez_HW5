@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4890071}
-  - component: {fileID: 4890073}
+  - component: {fileID: 4890072}
   m_Layer: 0
   m_Name: N_ShapedObstacle
   m_TagString: Untagged
@@ -155,7 +155,7 @@ Transform:
   m_Father: {fileID: 1769748228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &4890073
+--- !u!54 &4890072
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,13 +163,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4890070}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 50
+  m_Drag: 5
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!4 &21337030 stripped
 Transform:
@@ -507,7 +507,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4919502234666855765, guid: 3fca1fc8e739c43a0af37ed4deedac4d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3fca1fc8e739c43a0af37ed4deedac4d, type: 3}
 --- !u!1001 &385776469
 PrefabInstance:
@@ -516,20 +517,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2058975209}
     m_Modifications:
-    - target: {fileID: -5074835594210545824, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+    - target: {fileID: 4919502234666855765, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
-      propertyPath: m_Drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -5074835594210545824, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
+      propertyPath: m_Constraints
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.6
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
@@ -539,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
@@ -668,15 +664,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2058975209}
     m_Modifications:
-    - target: {fileID: -5074835594210545824, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+    - target: {fileID: 4919502234666855765, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
-      propertyPath: m_Drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -5074835594210545824, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
+      propertyPath: m_Constraints
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
@@ -844,6 +835,8 @@ GameObject:
   - component: {fileID: 768545879}
   - component: {fileID: 768545878}
   - component: {fileID: 768545877}
+  - component: {fileID: 768545882}
+  - component: {fileID: 768545881}
   m_Layer: 0
   m_Name: Marble
   m_TagString: Untagged
@@ -926,6 +919,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!135 &768545881
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768545876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &768545882
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768545876}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0.5
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &804379074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1149,7 @@ GameObject:
   - component: {fileID: 970127820}
   - component: {fileID: 970127823}
   - component: {fileID: 970127822}
+  - component: {fileID: 970127824}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -1195,6 +1218,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970127819}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &970127824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970127819}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.99999994, z: 1}
+  m_Center: {x: 0.0000009536743, y: 0.000015258789, z: 0}
 --- !u!1 &1020967548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,7 +1258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020967548}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 50.1, y: 0, z: 1.0999985}
+  m_LocalPosition: {x: 49, y: 0, z: 1.0999985}
   m_LocalScale: {x: 100, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1562402435}
@@ -1584,7 +1620,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4919502234666855765, guid: 3fca1fc8e739c43a0af37ed4deedac4d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3fca1fc8e739c43a0af37ed4deedac4d, type: 3}
 --- !u!4 &1526800667 stripped
 Transform:
@@ -1601,6 +1638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1562402435}
+  - component: {fileID: 1562402436}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -1616,8 +1654,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562402434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.07, z: 0}
+  m_LocalScale: {x: 1, y: 2.0415192, z: 1}
   m_Children:
   - {fileID: 804379075}
   - {fileID: 1020967549}
@@ -1626,6 +1664,22 @@ Transform:
   m_Father: {fileID: 522320456}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1562402436
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562402434}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1572768654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,7 +1999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ed178ad7e684567bfe8df4cd82632a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.2
+  moveSpeed: 0.1
   delta: 45
 --- !u!1 &1877980112
 GameObject:
@@ -2049,8 +2103,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058975209}
-  - component: {fileID: 2058975211}
-  - component: {fileID: 2058975210}
   m_Layer: 0
   m_Name: MovingObstacles
   m_TagString: Untagged
@@ -2075,35 +2127,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2058975210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058975208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9264bee7eb044b0bc60ab93f8c0212, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 1
---- !u!54 &2058975211
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058975208}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2072313737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,6 +2137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2072313738}
   - component: {fileID: 2072313739}
+  - component: {fileID: 2072313740}
   m_Layer: 0
   m_Name: L_ShapedObstacle
   m_TagString: Untagged
@@ -2150,6 +2174,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 1
+--- !u!54 &2072313740
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072313737}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 5
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
 --- !u!1001 &2110324883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2165,7 +2205,7 @@ PrefabInstance:
     - target: {fileID: 4108177942186657922, guid: 7b8d65a95563e419da6690f52fa989f5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.5
+      value: -36.5
       objectReference: {fileID: 0}
     - target: {fileID: 4108177942186657922, guid: 7b8d65a95563e419da6690f52fa989f5,
         type: 3}
@@ -2175,7 +2215,7 @@ PrefabInstance:
     - target: {fileID: 4108177942186657922, guid: 7b8d65a95563e419da6690f52fa989f5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 39.9
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 4108177942186657922, guid: 7b8d65a95563e419da6690f52fa989f5,
         type: 3}
@@ -2292,7 +2332,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7b8d65a95563e419da6690f52fa989f5, type: 3}
 --- !u!4 &3481875741637275574 stripped
 Transform:
