@@ -9,7 +9,7 @@ public class CameraBehavior : MonoBehaviour
     
     void Start()
     {
-        target = GameObject.Find("Marble").transform; 
+        target = GameObject.Find("Marble").transform;
     }
 
     void LateUpdate()

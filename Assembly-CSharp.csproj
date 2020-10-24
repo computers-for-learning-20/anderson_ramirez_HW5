@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\GoalBehavior.cs" />
     <Compile Include="Assets\Scripts\MarbleBehavior.cs" />
     <Compile Include="Assets\Scripts\OscillateX.cs" />
+    <Compile Include="Assets\Scripts\OscillateZ.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.12f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
