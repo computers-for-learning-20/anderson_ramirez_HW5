@@ -16,6 +16,7 @@ public class RotateY : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // rotate behavior used L-shaped obstacle spin
         transform.Rotate(0, rotateSpeed, 0, Space.Self);
     }
 }
