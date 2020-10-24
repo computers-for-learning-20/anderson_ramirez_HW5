@@ -20,5 +20,6 @@ The primary learning goals of this lab are:
 * The Particle System was used to create two types of particles (extra credit):
   1. Small sparkles to highlight goal objects.
   2. Larger bursts when a goal is collected.
-* The halo effect was also applied to our goal materials.
 * Simple animation added to the N_ShapedObstacle: moves from one side to another.
+* The halo effect was also applied to our goal materials.
+* In order to make the camera behave properly, we fixed rotation on the Marble object's RigidBody.
