@@ -1,4 +1,4 @@
-# Lab4_IntroToUnity
+# HW5: Leveling up Your Unity Skills
 
 ## Team Members:
 * Kelsey Anderson
@@ -7,19 +7,16 @@
 ## Goals:
 
 The primary learning goals of this lab are:
-* Become familiar with Unity
-* Create Objects, Prefabs, and Materials
-* Create C# scripts for Movement
-* Automatic and with User input
-* Using either native variables or RigidBody
-* Create C# Collisions and use Unity Collider Components
+* Create jumping scripts and use gravity in Unity
+* Create projectiles and learn instantiation of classes in C# and Unity
+* Use global level variables to affect game play
+* Reduce Marble health
+* Reduce Obstacle Health
+* Remove elements from the game as it is played
+* Add text to screen
+* Understand and use win/lose conditions in Unity
 
-[More about the HW4](https://docs.google.com/document/u/2/d/e/2PACX-1vT81ti95nJyoRpH5Mg2o0711fiJDai3CglKITLOIYXfInDbH5iPGjWGGOM40Xunt6UIP9gkJ5oPCLZV/pub)
+[More about the HW5](https://docs.google.com/document/u/1/d/e/2PACX-1vQTKAbtBLvtmtWqItUt3KYrw8a4aCy43U0P6jl6aQJofnuQfr-GJYuwHb-crgiq9NFeuDcdLTQW04Z4/pub)
 
 ## Implementation Notes:
-* The Particle System was used to create two types of particles (extra credit):
-  1. Small sparkles to highlight goal objects.
-  2. Larger bursts when a goal is collected.
-* Simple animation added to the N_ShapedObstacle: moves from one side to another.
-* The halo effect was also applied to our goal materials.
-* In order to make the camera behave properly, we fixed rotation on the Marble object's RigidBody.
+
