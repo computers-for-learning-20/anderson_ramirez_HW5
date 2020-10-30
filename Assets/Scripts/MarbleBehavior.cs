@@ -6,16 +6,22 @@ public class MarbleBehavior : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float rotateSpeed = 180f;
-    
+    public float jumpVelocity = 5f;
+    public float distanceToGround = 0.1f;
+    public LayerMask groundLayer;
+    public GameObject blast;
+    public float blastSpeed = 50f;
     private float fbInput;
     private float lrInput;
     
     private Rigidbody _rb;
+    private SphereCollider _col;
     
     void Start()
     {
         //You'll need to add a rigidbody to the marble first
         _rb = GetComponent<Rigidbody>();
+        _col = GetComponent<SphereCollider>();
     }
 
     // Update is called once per frame
@@ -26,20 +32,15 @@ public class MarbleBehavior : MonoBehaviour
         lrInput = Input.GetAxis("Horizontal")*rotateSpeed;
 
         // Commenting out these 2 lines to use RigidBody controls instead
-        this.transform.Translate(Vector3.forward * fbInput* Time.deltaTime);
-        this.transform.Rotate(Vector3.up* lrInput* Time.deltaTime);
+        //this.transform.Translate(Vector3.forward * fbInput* Time.deltaTime);
+        //this.transform.Rotate(Vector3.up* lrInput* Time.deltaTime);
         
     }
     
     void FixedUpdate()
     {
-        /* I don't think we should have both sets
-         * of controls running at the same time.
-         * They both work fine though.
-         * Commenting these out for now.
-         * 
+        
         Vector3 rotation = Vector3.up * lrInput;
-
         Quaternion angleRot = Quaternion.Euler(rotation *
             Time.fixedDeltaTime);
 
@@ -47,7 +48,30 @@ public class MarbleBehavior : MonoBehaviour
             this.transform.forward * fbInput * Time.fixedDeltaTime);
 
         _rb.MoveRotation(_rb.rotation * angleRot);
-        */
+
+        //Check if Marble is near the ground and if space bar
+        if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)){
+            _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
+        }
+
+        //Check a mouse click
+        if (Input.GetMouseButtonDown(0)){
+            GameObject newBlast = Instantiate(blast, 
+                            this.transform.position + new Vector3(1, 0, 0),
+                            this.transform.rotation) as GameObject;
+            Rigidbody blastRB = newBlast.GetComponent<Rigidbody>();
+
+            blastRB.velocity = this.transform.forward * blastSpeed; 
+        }
+    }
+
+    private bool IsGrounded(){
+        Vector3 capsuleBottom = new Vector3(_col.bounds.center.x, _col.bounds.min.y,
+                                            _col.bounds.center.z);
+        bool grounded = Physics.CheckCapsule(_col.bounds.center, 
+                        capsuleBottom, distanceToGround, groundLayer,
+                        QueryTriggerInteraction.Ignore);
+        return grounded;
     }
     
 }
