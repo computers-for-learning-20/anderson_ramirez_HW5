@@ -4799,6 +4799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoalParticles: {fileID: 0}
   GoalCollision: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &2369037781835957019
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,6 +4930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoalParticles: {fileID: 4348426288924134323}
   GoalCollision: {fileID: 1150073844037347507}
+  gameManager: {fileID: 0}
 --- !u!122 &4521022802547466876
 Halo:
   m_ObjectHideFlags: 0
