@@ -11,6 +11,7 @@ public class MarbleBehavior : MonoBehaviour
     public LayerMask groundLayer;
     public GameObject blast;
     public float blastSpeed = 50f;
+    public GameBehavior gameManager;
     private float fbInput;
     private float lrInput;
     
@@ -22,6 +23,8 @@ public class MarbleBehavior : MonoBehaviour
         //You'll need to add a rigidbody to the marble first
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<SphereCollider>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameBehavior>();
+
     }
 
     // Update is called once per frame
@@ -54,7 +57,7 @@ public class MarbleBehavior : MonoBehaviour
             _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
         }
 
-        //Check a mouse click
+        //Check a mouse click to project blasts
         if (Input.GetMouseButtonDown(0)){
             GameObject newBlast = Instantiate(blast, 
                             this.transform.position + new Vector3(1, 0, 0),
@@ -72,6 +75,20 @@ public class MarbleBehavior : MonoBehaviour
                         capsuleBottom, distanceToGround, groundLayer,
                         QueryTriggerInteraction.Ignore);
         return grounded;
+    }
+
+    void OnCollisionEnter(Collision collision){
+        
+        //Decrease Marble's health if it collides with any obstacle
+        if(collision.gameObject.name == "Obstacle" | 
+           collision.gameObject.name == "L_ShapedObstacle"|
+           collision.gameObject.name == "N_ShapedObstacle"|
+           collision.gameObject.name == "X Mover" |
+           collision.gameObject.name == "Z Mover"){
+
+               gameManager.HealthMarble -= 10;
+               Debug.Log("Ouch! Marble's Health decreased!");
+           }
     }
     
 }

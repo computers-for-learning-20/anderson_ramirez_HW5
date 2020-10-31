@@ -7,7 +7,13 @@ public class GoalBehavior : MonoBehaviour
 
     public ParticleSystem GoalParticles;
     public ParticleSystem GoalCollision;
+    public GameBehavior gameManager; 
 
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameBehavior>();
+
+    }
     void OnCollisionEnter(Collision collision)
     {
        //Put collision code here
@@ -18,9 +24,13 @@ public class GoalBehavior : MonoBehaviour
             GoalCollision.Play();
             Destroy(GoalParticles);
 
+            //Update goals colected
+            gameManager.Goals += 1;
+
             // removed the collected goal
             Destroy(this.transform.gameObject);
             Debug.Log("Goal!!!");
+            Debug.Log("Total goals reached: "+gameManager.Goals);
         }
     }
 }
