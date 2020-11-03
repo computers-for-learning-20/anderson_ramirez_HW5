@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &655209268617384398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6584600528035648638}
+  m_Layer: 0
+  m_Name: N_ref_point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6584600528035648638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655209268617384398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.65, y: -2.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4548440279332137204}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4548440279332137205
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,13 +55,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4548440279332137205}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -34.2, y: 1.05, z: -28.763222}
-  m_LocalScale: {x: 0.6922031, y: 3.6027682, z: 2}
+  m_LocalScale: {x: 1, y: 0.97449, z: 2.3268}
   m_Children:
   - {fileID: 7863291881721022157}
   - {fileID: 7863291882566865816}
   - {fileID: 4548440279441722607}
+  - {fileID: 6584600528035648638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97,8 +128,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4548440279441722600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.22, y: 0.5, z: 0}
-  m_LocalScale: {x: 7.184186, y: 0.013481, z: 1}
+  m_LocalPosition: {x: -3.22, y: 2.54, z: 0}
+  m_LocalScale: {x: 7.184186, y: 0.2716, z: 1}
   m_Children: []
   m_Father: {fileID: 4548440279332137204}
   m_RootOrder: 2
@@ -233,7 +264,7 @@ PrefabInstance:
     - target: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
@@ -324,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071861, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
