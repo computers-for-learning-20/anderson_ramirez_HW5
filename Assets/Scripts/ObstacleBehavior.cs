@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObstacleBehavior : MonoBehaviour
 {
     private uint Obstacle_Health = 100;
+    public ParticleSystem BlastCollision;
+
     void OnCollisionEnter(Collision collision)
     {
        //Put collision code here
@@ -14,6 +16,7 @@ public class ObstacleBehavior : MonoBehaviour
 
             if(Obstacle_Health - 50 == 0){
                 Debug.Log("Bye bye obstacle!!!");
+                BlastCollision.Play();
                 Destroy(this.transform.gameObject);
             }
             else{

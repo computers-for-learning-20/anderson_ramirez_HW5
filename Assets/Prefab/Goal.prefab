@@ -4797,8 +4797,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4048dcc4dc1ba4c65a18a5ca506c1a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoalParticles: {fileID: 0}
-  GoalCollision: {fileID: 0}
+  GoalParticles: {fileID: 4348426288924134323}
+  GoalCollision: {fileID: 1150073844037347507}
   gameManager: {fileID: 0}
 --- !u!1 &2369037781835957019
 GameObject:

@@ -7,7 +7,7 @@ public class GoalBehavior : MonoBehaviour
 
     public ParticleSystem GoalParticles;
     public ParticleSystem GoalCollision;
-    public GameBehavior gameManager; 
+    public GameBehavior gameManager;
 
     void Start()
     {
