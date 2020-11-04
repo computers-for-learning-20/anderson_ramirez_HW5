@@ -11,7 +11,8 @@ public class GoalBehavior : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameBehavior>();
+        gameManager = GameObject.Find("GameManager")
+            .GetComponent<GameBehavior>();
 
     }
     void OnCollisionEnter(Collision collision)

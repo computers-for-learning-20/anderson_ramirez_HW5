@@ -23,7 +23,9 @@ public class MarbleBehavior : MonoBehaviour
         //You'll need to add a rigidbody to the marble first
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<SphereCollider>();
-        gameManager = GameObject.Find("GameManager").GetComponent<GameBehavior>();
+
+        gameManager = GameObject.Find("GameManager")
+            .GetComponent<GameBehavior>();
 
     }
 
@@ -33,11 +35,6 @@ public class MarbleBehavior : MonoBehaviour
         // Put code is for movement using the Sprite's native variables here
         fbInput = Input.GetAxis("Vertical")*moveSpeed;
         lrInput = Input.GetAxis("Horizontal")*rotateSpeed;
-
-        // Commenting out these 2 lines to use RigidBody controls instead
-        //this.transform.Translate(Vector3.forward * fbInput* Time.deltaTime);
-        //this.transform.Rotate(Vector3.up* lrInput* Time.deltaTime);
-        
     }
     
     void FixedUpdate()
@@ -80,15 +77,11 @@ public class MarbleBehavior : MonoBehaviour
     void OnCollisionEnter(Collision collision){
         
         //Decrease Marble's health if it collides with any obstacle
-        if(collision.gameObject.name == "Obstacle" | 
-           collision.gameObject.name == "L_ShapedObstacle"|
-           collision.gameObject.name == "N_ShapedObstacle"|
-           collision.gameObject.name == "X Mover" |
-           collision.gameObject.name == "Z Mover"){
-
+        if(collision.gameObject.name == "obstacleBody")
+        {
                gameManager.HealthMarble -= 10;
                Debug.Log("Ouch! Marble's Health decreased!");
-           }
+        }
     }
     
 }
