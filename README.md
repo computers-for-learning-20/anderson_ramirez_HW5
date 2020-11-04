@@ -19,4 +19,5 @@ The primary learning goals of this lab are:
 [More about the HW5](https://docs.google.com/document/u/1/d/e/2PACX-1vQTKAbtBLvtmtWqItUt3KYrw8a4aCy43U0P6jl6aQJofnuQfr-GJYuwHb-crgiq9NFeuDcdLTQW04Z4/pub)
 
 ## Implementation Notes:
-
+* We added small white capsules for health repair. You must jump up a stepped structure to get them. They add 10 health back.
+* 
