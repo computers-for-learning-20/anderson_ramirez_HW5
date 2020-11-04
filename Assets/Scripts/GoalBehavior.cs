@@ -17,8 +17,8 @@ public class GoalBehavior : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-       //Put collision code here
-       if ( collision.gameObject.name == "Marble")
+        //Put collision code here
+        if (collision.gameObject.name == "Marble")
         {
             // triggers the burst of white
             // particles and stops the small yellow ones
@@ -31,7 +31,7 @@ public class GoalBehavior : MonoBehaviour
             // removed the collected goal
             Destroy(this.transform.gameObject);
             Debug.Log("Goal!!!");
-            Debug.Log("Total goals reached: "+gameManager.Goals);
+            Debug.Log("Total goals reached: " + gameManager.Goals);
         }
     }
 }

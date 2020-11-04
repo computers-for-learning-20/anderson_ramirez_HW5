@@ -19,6 +19,7 @@ public class GameBehavior : MonoBehaviour
         get {return health_Marble; }
         set
         {
+            uint priorHealth = health_Marble;
             health_Marble = value;
 
             if(health_Marble <= 0)
@@ -26,9 +27,17 @@ public class GameBehavior : MonoBehaviour
                 labelText = "Oh oh oh no! T_T";
                 WinOrLoseScreen("lose");
             }
-            else
+            else if (priorHealth > health_Marble)
             {
                 labelText = "ouch!";
+            }
+            else if (priorHealth == health_Marble)
+            {
+                labelText = "You're already healthy...";
+            }
+            else
+            {
+                labelText = "Ah! Feel the healing!";
             }
         }
     }

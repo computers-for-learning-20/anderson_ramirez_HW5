@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\CameraBehavior.cs" />
     <Compile Include="Assets\Scripts\GameBehavior.cs" />
     <Compile Include="Assets\Scripts\GoalBehavior.cs" />
+    <Compile Include="Assets\Scripts\HealthItemBehavior.cs" />
     <Compile Include="Assets\Scripts\MarbleBehavior.cs" />
     <Compile Include="Assets\Scripts\ObstacleBehavior.cs" />
     <Compile Include="Assets\Scripts\OscillateX.cs" />

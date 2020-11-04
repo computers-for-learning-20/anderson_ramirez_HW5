@@ -7,7 +7,7 @@ public class MarbleBehavior : MonoBehaviour
     public float moveSpeed = 5f;
     public float rotateSpeed = 180f;
     public float jumpVelocity = 5f;
-    public float distanceToGround = 0.1f;
+    public float distanceToGround = 0.5f;
     public LayerMask groundLayer;
     public GameObject blast;
     public float blastSpeed = 50f;
