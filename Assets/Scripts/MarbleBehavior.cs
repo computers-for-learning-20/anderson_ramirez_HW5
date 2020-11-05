@@ -12,6 +12,7 @@ public class MarbleBehavior : MonoBehaviour
     public GameObject blast;
     public float blastSpeed = 50f;
     public GameBehavior gameManager;
+
     private float fbInput;
     private float lrInput;
     
@@ -81,6 +82,21 @@ public class MarbleBehavior : MonoBehaviour
         {
                gameManager.HealthMarble -= 10;
                Debug.Log("Ouch! Marble's Health decreased!");
+        }
+
+        //Decrease Marble's health if it collides with enemy
+        if (collision.gameObject.name == "EnemyBody")
+        {
+            if(gameManager.HealthMarble <= 20)
+            {
+                gameManager.HealthMarble = 0;
+                Debug.Log("Ouch! You've lost!");
+            }
+            else
+            {
+                gameManager.HealthMarble -= 20;
+                Debug.Log("Ouch! Marble's Health decreased!");
+            }
         }
     }
     

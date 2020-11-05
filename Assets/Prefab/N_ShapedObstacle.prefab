@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlastCollision: {fileID: 3159067160615400049}
+  DamagedBodyMaterial: {fileID: 2100000, guid: 8f6786c97c8be4dab8b94292541791c1, type: 2}
+  Object: {fileID: 5596137618229361573}
 --- !u!1 &3639905675222882241
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,6 +5145,12 @@ PrefabInstance:
 --- !u!4 &7863291881721022157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4548440277808845881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5596137618229361573 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8265855558886813596, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
     type: 3}
   m_PrefabInstance: {fileID: 4548440277808845881}
   m_PrefabAsset: {fileID: 0}

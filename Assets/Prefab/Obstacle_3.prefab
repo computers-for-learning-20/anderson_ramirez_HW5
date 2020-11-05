@@ -55,6 +55,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6159829586232245610}
     m_Modifications:
+    - target: {fileID: 1871331968910742679, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: DamagedBodyMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f6786c97c8be4dab8b94292541791c1, type: 2}
+    - target: {fileID: 1871331968910742679, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: Object
+      value: 
+      objectReference: {fileID: 2867151980653859485}
     - target: {fileID: 4919502234666855765, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
       propertyPath: m_Constraints
@@ -74,6 +84,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458931228124555889, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: m_Name
+      value: obstacleBody
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071850, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
@@ -169,6 +184,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6159829585686740225}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &2867151980653859485 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8265855558886813596, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6159829585686740225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6159829585880109478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,6 +197,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6159829586232245610}
     m_Modifications:
+    - target: {fileID: 1871331968910742679, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: DamagedBodyMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f6786c97c8be4dab8b94292541791c1, type: 2}
+    - target: {fileID: 1871331968910742679, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: Object
+      value: 
+      objectReference: {fileID: 2867151981920763450}
     - target: {fileID: 4919502234666855765, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
       propertyPath: m_UseGravity
@@ -195,6 +226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Drag
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458931228124555889, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: m_Name
+      value: obstacleBody
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071850, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
@@ -295,6 +331,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6159829585880109478}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &2867151981920763450 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8265855558886813596, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6159829585880109478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6159829586569311369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,6 +344,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6159829586232245610}
     m_Modifications:
+    - target: {fileID: 1871331968910742679, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: DamagedBodyMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f6786c97c8be4dab8b94292541791c1, type: 2}
+    - target: {fileID: 1871331968910742679, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: Object
+      value: 
+      objectReference: {fileID: 2867151981531978517}
     - target: {fileID: 4919502234666855765, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
       propertyPath: m_Constraints
@@ -316,6 +368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458931228124555889, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+        type: 3}
+      propertyPath: m_Name
+      value: obstacleBody
       objectReference: {fileID: 0}
     - target: {fileID: 5926534917857071850, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
         type: 3}
@@ -414,6 +471,12 @@ PrefabInstance:
 --- !u!4 &523354637029762685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5926534917857071860, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6159829586569311369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2867151981531978517 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8265855558886813596, guid: 3fca1fc8e739c43a0af37ed4deedac4d,
     type: 3}
   m_PrefabInstance: {fileID: 6159829586569311369}
   m_PrefabAsset: {fileID: 0}

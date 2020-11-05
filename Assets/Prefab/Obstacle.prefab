@@ -4936,6 +4936,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlastCollision: {fileID: 6963683666580233505}
+  DamagedBodyMaterial: {fileID: 2100000, guid: 8f6786c97c8be4dab8b94292541791c1, type: 2}
+  Object: {fileID: 8265855558886813596}
 --- !u!1 &5926534917857071861
 GameObject:
   m_ObjectHideFlags: 0
@@ -4945,7 +4947,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5926534917857071860}
-  - component: {fileID: 2153549078770609787}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -4969,16 +4970,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2153549078770609787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926534917857071861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bea745bec89b24d94b1f3510c40ccb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BlastCollision: {fileID: 6963683666580233505}
