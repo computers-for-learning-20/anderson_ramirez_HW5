@@ -6,6 +6,7 @@ public class HealthItemBehavior : MonoBehaviour
 {
 
     public GameBehavior gameManager;
+    public ParticleSystem collisionParticles; 
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class HealthItemBehavior : MonoBehaviour
             {
                 gameManager.HealthMarble += 10;
                 Debug.Log("Yum! Health has been increased");
-
+                collisionParticles.Play();
                 // removed the collected health capsule
                 Destroy(this.transform.gameObject);
 
