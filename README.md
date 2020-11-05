@@ -20,4 +20,8 @@ The primary learning goals of this lab are:
 
 ## Implementation Notes:
 * We added small white capsules for health repair. You must jump up a stepped structure to get them. They add 10 health back.
-* 
+* We added two enemy objects that target the marble and will reduce it's health.
+  * One large one that requires the Marble to come close to it to activate and reduces health by 20.
+  * One small one that targets the Marble immediately and reduces health by 10.
+  * Both can be destroyed by shooting twice with blasts.
+* We modified the obstacle material so that the first time an obstale is hit, it appears to crack.
