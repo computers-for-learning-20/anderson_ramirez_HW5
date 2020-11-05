@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +12,8 @@ public class MarbleBehavior : MonoBehaviour
     public GameObject blast;
     public float blastSpeed = 50f;
     public GameBehavior gameManager;
+
+    public ParticleSystem ObstacleCollision;
 
     private float fbInput;
     private float lrInput;
@@ -80,6 +82,7 @@ public class MarbleBehavior : MonoBehaviour
         //Decrease Marble's health if it collides with any obstacle
         if(collision.gameObject.name == "obstacleBody")
         {
+               ObstacleCollision.Play();
                gameManager.HealthMarble -= 10;
                Debug.Log("Ouch! Marble's Health decreased!");
         }

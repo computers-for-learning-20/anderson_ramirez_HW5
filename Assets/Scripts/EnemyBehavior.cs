@@ -1,73 +1,53 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    public Transform marble;
-    //public Transform patrolRoute;
-    //public List<Transform> locations;
-    //private int locationIndex = 0;
-
     public ParticleSystem BlastCollision;
+    public Transform marble;
+    private uint Obstacle_Health = 100;
     private NavMeshAgent agent;
-    private int _lives = 3;
 
-    public int EnemyLives
-    {
-        get { return _lives; }
-        private set
-        {
-            _lives = value;
-
-            if (_lives <= 0)
-            {
-                BlastCollision.Play();
-                Debug.Log("Enemy Destroyed!");
-                Destroy(this.transform.gameObject);
-            }
-        }
+    void Start(){
+        agent = GetComponent<NavMeshAgent>();
+        marble = GameObject.Find("Marble").transform;
     }
+
+    void Update(){ }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "Marble")
+        if (other.name == "Marble")
         {
-            Debug.Log("Enemy Agent:: Target Detected!");
             agent.destination = marble.position;
+            Debug.Log("Enemy:: Targeting Systems Go!");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.name == "Marble")
+        Debug.Log("Enemy:: Target Lost.");
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+       //Put collision code here
+       if (collision.gameObject.name == "Blast(Clone)")
         {
-            Debug.Log("Enemy Agent:: Target out of Range.");
+            //Decrease Obstacle's Health, Destroy if it reaches to 0
+
+            if(Obstacle_Health - 50 == 0){
+                Debug.Log("Bye bye enemy!!!");
+                BlastCollision.Play();
+                Destroy(this.transform.gameObject);
+            }
+            else
+            {
+                Obstacle_Health -= 50;
+                Debug.Log("Enemy's Health decreased!!!");
+            }
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.name == "Blast(Clone)")
-        {
-            EnemyLives -= 1;
-            Debug.Log(string.Format("You hit the enemy! " +
-                "{0} lives remain.", EnemyLives));
-        }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        marble = GameObject.Find("Marble").transform;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
